@@ -1,0 +1,742 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C52238A1F7A0C02001873CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5223891F7A0C02001873CE /* LoginViewController.swift */; };
+		0C615ED31F7A0B3500B7D4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */; };
+		0C615ED51F7A0B3500B7D4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615ED41F7A0B3500B7D4D0 /* ViewController.swift */; };
+		0C615ED81F7A0B3500B7D4D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C615ED61F7A0B3500B7D4D0 /* Main.storyboard */; };
+		0C615EDA1F7A0B3500B7D4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C615ED91F7A0B3500B7D4D0 /* Assets.xcassets */; };
+		0C615EDD1F7A0B3500B7D4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C615EDB1F7A0B3500B7D4D0 /* LaunchScreen.storyboard */; };
+		0C615EE81F7A0B3500B7D4D0 /* BabyBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615EE71F7A0B3500B7D4D0 /* BabyBirdTests.swift */; };
+		0C615EF31F7A0B3500B7D4D0 /* BabyBirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615EF21F7A0B3500B7D4D0 /* BabyBirdUITests.swift */; };
+		3FB6BC67CF56289D14755AC2 /* Pods_BabyBirdTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19AAE079BF86254EB0B0137 /* Pods_BabyBirdTests.framework */; };
+		6A307C46F5BC11CC84D1C3C6 /* Pods_BabyBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */; };
+		EB201EB2D5128FE4093A1F08 /* Pods_BabyBirdUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C615EE41F7A0B3500B7D4D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C615EC71F7A0B3500B7D4D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C615ECE1F7A0B3500B7D4D0;
+			remoteInfo = BabyBird;
+		};
+		0C615EEF1F7A0B3500B7D4D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C615EC71F7A0B3500B7D4D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C615ECE1F7A0B3500B7D4D0;
+			remoteInfo = BabyBird;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0726752897BD2CE4C9555A81 /* Pods-BabyBirdUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdUITests/Pods-BabyBirdUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C5223891F7A0C02001873CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0C615ECF1F7A0B3500B7D4D0 /* BabyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C615ED41F7A0B3500B7D4D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C615ED71F7A0B3500B7D4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C615ED91F7A0B3500B7D4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C615EDC1F7A0B3500B7D4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C615EDE1F7A0B3500B7D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C615EE31F7A0B3500B7D4D0 /* BabyBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C615EE71F7A0B3500B7D4D0 /* BabyBirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyBirdTests.swift; sourceTree = "<group>"; };
+		0C615EE91F7A0B3500B7D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C615EEE1F7A0B3500B7D4D0 /* BabyBirdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyBirdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C615EF21F7A0B3500B7D4D0 /* BabyBirdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyBirdUITests.swift; sourceTree = "<group>"; };
+		0C615EF41F7A0B3500B7D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBirdUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38659B2171825FF3AA2FAA03 /* Pods-BabyBirdTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdTests/Pods-BabyBirdTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A5181AE86FDB3BA7F31E40D /* Pods-BabyBird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBird/Pods-BabyBird.debug.xcconfig"; sourceTree = "<group>"; };
+		BF644626E342B82A8B58989E /* Pods-BabyBirdTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdTests/Pods-BabyBirdTests.release.xcconfig"; sourceTree = "<group>"; };
+		C19AAE079BF86254EB0B0137 /* Pods_BabyBirdTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBirdTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5401877E78258193D7B41A2 /* Pods-BabyBirdUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdUITests/Pods-BabyBirdUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD5B59163390591DF7F1FECD /* Pods-BabyBird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBird.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBird/Pods-BabyBird.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C615ECC1F7A0B3500B7D4D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A307C46F5BC11CC84D1C3C6 /* Pods_BabyBird.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C615EE01F7A0B3500B7D4D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB6BC67CF56289D14755AC2 /* Pods_BabyBirdTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C615EEB1F7A0B3500B7D4D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB201EB2D5128FE4093A1F08 /* Pods_BabyBirdUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C615EC61F7A0B3500B7D4D0 = {
+			isa = PBXGroup;
+			children = (
+				0C615ED11F7A0B3500B7D4D0 /* BabyBird */,
+				0C615EE61F7A0B3500B7D4D0 /* BabyBirdTests */,
+				0C615EF11F7A0B3500B7D4D0 /* BabyBirdUITests */,
+				0C615ED01F7A0B3500B7D4D0 /* Products */,
+				376C7E9D3B7F37E3C0A7306C /* Pods */,
+				92D3900D666A454A5B27C21C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0C615ED01F7A0B3500B7D4D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C615ECF1F7A0B3500B7D4D0 /* BabyBird.app */,
+				0C615EE31F7A0B3500B7D4D0 /* BabyBirdTests.xctest */,
+				0C615EEE1F7A0B3500B7D4D0 /* BabyBirdUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C615ED11F7A0B3500B7D4D0 /* BabyBird */ = {
+			isa = PBXGroup;
+			children = (
+				0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */,
+				0C615ED41F7A0B3500B7D4D0 /* ViewController.swift */,
+				0C615ED61F7A0B3500B7D4D0 /* Main.storyboard */,
+				0C5223891F7A0C02001873CE /* LoginViewController.swift */,
+				0C615ED91F7A0B3500B7D4D0 /* Assets.xcassets */,
+				0C615EDB1F7A0B3500B7D4D0 /* LaunchScreen.storyboard */,
+				0C615EDE1F7A0B3500B7D4D0 /* Info.plist */,
+			);
+			path = BabyBird;
+			sourceTree = "<group>";
+		};
+		0C615EE61F7A0B3500B7D4D0 /* BabyBirdTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C615EE71F7A0B3500B7D4D0 /* BabyBirdTests.swift */,
+				0C615EE91F7A0B3500B7D4D0 /* Info.plist */,
+			);
+			path = BabyBirdTests;
+			sourceTree = "<group>";
+		};
+		0C615EF11F7A0B3500B7D4D0 /* BabyBirdUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0C615EF21F7A0B3500B7D4D0 /* BabyBirdUITests.swift */,
+				0C615EF41F7A0B3500B7D4D0 /* Info.plist */,
+			);
+			path = BabyBirdUITests;
+			sourceTree = "<group>";
+		};
+		376C7E9D3B7F37E3C0A7306C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A5181AE86FDB3BA7F31E40D /* Pods-BabyBird.debug.xcconfig */,
+				FD5B59163390591DF7F1FECD /* Pods-BabyBird.release.xcconfig */,
+				38659B2171825FF3AA2FAA03 /* Pods-BabyBirdTests.debug.xcconfig */,
+				BF644626E342B82A8B58989E /* Pods-BabyBirdTests.release.xcconfig */,
+				0726752897BD2CE4C9555A81 /* Pods-BabyBirdUITests.debug.xcconfig */,
+				F5401877E78258193D7B41A2 /* Pods-BabyBirdUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92D3900D666A454A5B27C21C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */,
+				C19AAE079BF86254EB0B0137 /* Pods_BabyBirdTests.framework */,
+				2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C615ECE1F7A0B3500B7D4D0 /* BabyBird */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C615EF71F7A0B3500B7D4D0 /* Build configuration list for PBXNativeTarget "BabyBird" */;
+			buildPhases = (
+				90621C5149B15A000391623B /* [CP] Check Pods Manifest.lock */,
+				0C615ECB1F7A0B3500B7D4D0 /* Sources */,
+				0C615ECC1F7A0B3500B7D4D0 /* Frameworks */,
+				0C615ECD1F7A0B3500B7D4D0 /* Resources */,
+				AF3E9F8304780C5622804A8E /* [CP] Embed Pods Frameworks */,
+				ACEEF347A4D4B239ADA8B7B7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabyBird;
+			productName = BabyBird;
+			productReference = 0C615ECF1F7A0B3500B7D4D0 /* BabyBird.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C615EE21F7A0B3500B7D4D0 /* BabyBirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C615EFA1F7A0B3500B7D4D0 /* Build configuration list for PBXNativeTarget "BabyBirdTests" */;
+			buildPhases = (
+				6C9885FC3017AFC7F894AF92 /* [CP] Check Pods Manifest.lock */,
+				0C615EDF1F7A0B3500B7D4D0 /* Sources */,
+				0C615EE01F7A0B3500B7D4D0 /* Frameworks */,
+				0C615EE11F7A0B3500B7D4D0 /* Resources */,
+				36330C0FC641F22177A20A17 /* [CP] Embed Pods Frameworks */,
+				770892D38BB0797DF657B19E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C615EE51F7A0B3500B7D4D0 /* PBXTargetDependency */,
+			);
+			name = BabyBirdTests;
+			productName = BabyBirdTests;
+			productReference = 0C615EE31F7A0B3500B7D4D0 /* BabyBirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C615EED1F7A0B3500B7D4D0 /* BabyBirdUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C615EFD1F7A0B3500B7D4D0 /* Build configuration list for PBXNativeTarget "BabyBirdUITests" */;
+			buildPhases = (
+				945F1B151BA77C457DAB8D9B /* [CP] Check Pods Manifest.lock */,
+				0C615EEA1F7A0B3500B7D4D0 /* Sources */,
+				0C615EEB1F7A0B3500B7D4D0 /* Frameworks */,
+				0C615EEC1F7A0B3500B7D4D0 /* Resources */,
+				2024F2DA4BA62F4CBB7DB195 /* [CP] Embed Pods Frameworks */,
+				7A5C437E04F724378CC6AFE2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C615EF01F7A0B3500B7D4D0 /* PBXTargetDependency */,
+			);
+			name = BabyBirdUITests;
+			productName = BabyBirdUITests;
+			productReference = 0C615EEE1F7A0B3500B7D4D0 /* BabyBirdUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C615EC71F7A0B3500B7D4D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = HearsaySocial;
+				TargetAttributes = {
+					0C615ECE1F7A0B3500B7D4D0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					0C615EE21F7A0B3500B7D4D0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0C615ECE1F7A0B3500B7D4D0;
+					};
+					0C615EED1F7A0B3500B7D4D0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0C615ECE1F7A0B3500B7D4D0;
+					};
+				};
+			};
+			buildConfigurationList = 0C615ECA1F7A0B3500B7D4D0 /* Build configuration list for PBXProject "BabyBird" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C615EC61F7A0B3500B7D4D0;
+			productRefGroup = 0C615ED01F7A0B3500B7D4D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C615ECE1F7A0B3500B7D4D0 /* BabyBird */,
+				0C615EE21F7A0B3500B7D4D0 /* BabyBirdTests */,
+				0C615EED1F7A0B3500B7D4D0 /* BabyBirdUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C615ECD1F7A0B3500B7D4D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C615EDD1F7A0B3500B7D4D0 /* LaunchScreen.storyboard in Resources */,
+				0C615EDA1F7A0B3500B7D4D0 /* Assets.xcassets in Resources */,
+				0C615ED81F7A0B3500B7D4D0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C615EE11F7A0B3500B7D4D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C615EEC1F7A0B3500B7D4D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2024F2DA4BA62F4CBB7DB195 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyBirdUITests/Pods-BabyBirdUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36330C0FC641F22177A20A17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyBirdTests/Pods-BabyBirdTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C9885FC3017AFC7F894AF92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyBirdTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		770892D38BB0797DF657B19E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyBirdTests/Pods-BabyBirdTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A5C437E04F724378CC6AFE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyBirdUITests/Pods-BabyBirdUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90621C5149B15A000391623B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyBird-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		945F1B151BA77C457DAB8D9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyBirdUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACEEF347A4D4B239ADA8B7B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyBird/Pods-BabyBird-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF3E9F8304780C5622804A8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BabyBird/Pods-BabyBird-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BDBOAuth1Manager/BDBOAuth1Manager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDBOAuth1Manager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyBird/Pods-BabyBird-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C615ECB1F7A0B3500B7D4D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C52238A1F7A0C02001873CE /* LoginViewController.swift in Sources */,
+				0C615ED51F7A0B3500B7D4D0 /* ViewController.swift in Sources */,
+				0C615ED31F7A0B3500B7D4D0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C615EDF1F7A0B3500B7D4D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C615EE81F7A0B3500B7D4D0 /* BabyBirdTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C615EEA1F7A0B3500B7D4D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C615EF31F7A0B3500B7D4D0 /* BabyBirdUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C615EE51F7A0B3500B7D4D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C615ECE1F7A0B3500B7D4D0 /* BabyBird */;
+			targetProxy = 0C615EE41F7A0B3500B7D4D0 /* PBXContainerItemProxy */;
+		};
+		0C615EF01F7A0B3500B7D4D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C615ECE1F7A0B3500B7D4D0 /* BabyBird */;
+			targetProxy = 0C615EEF1F7A0B3500B7D4D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0C615ED61F7A0B3500B7D4D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C615ED71F7A0B3500B7D4D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0C615EDB1F7A0B3500B7D4D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C615EDC1F7A0B3500B7D4D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C615EF51F7A0B3500B7D4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C615EF61F7A0B3500B7D4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C615EF81F7A0B3500B7D4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5181AE86FDB3BA7F31E40D /* Pods-BabyBird.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BabyBird/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HearsaySocial.BabyBird;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0C615EF91F7A0B3500B7D4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD5B59163390591DF7F1FECD /* Pods-BabyBird.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BabyBird/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HearsaySocial.BabyBird;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0C615EFB1F7A0B3500B7D4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38659B2171825FF3AA2FAA03 /* Pods-BabyBirdTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BabyBirdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HearsaySocial.BabyBirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabyBird.app/BabyBird";
+			};
+			name = Debug;
+		};
+		0C615EFC1F7A0B3500B7D4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF644626E342B82A8B58989E /* Pods-BabyBirdTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BabyBirdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HearsaySocial.BabyBirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabyBird.app/BabyBird";
+			};
+			name = Release;
+		};
+		0C615EFE1F7A0B3500B7D4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0726752897BD2CE4C9555A81 /* Pods-BabyBirdUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = BabyBirdUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HearsaySocial.BabyBirdUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BabyBird;
+			};
+			name = Debug;
+		};
+		0C615EFF1F7A0B3500B7D4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5401877E78258193D7B41A2 /* Pods-BabyBirdUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = BabyBirdUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HearsaySocial.BabyBirdUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BabyBird;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C615ECA1F7A0B3500B7D4D0 /* Build configuration list for PBXProject "BabyBird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C615EF51F7A0B3500B7D4D0 /* Debug */,
+				0C615EF61F7A0B3500B7D4D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C615EF71F7A0B3500B7D4D0 /* Build configuration list for PBXNativeTarget "BabyBird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C615EF81F7A0B3500B7D4D0 /* Debug */,
+				0C615EF91F7A0B3500B7D4D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C615EFA1F7A0B3500B7D4D0 /* Build configuration list for PBXNativeTarget "BabyBirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C615EFB1F7A0B3500B7D4D0 /* Debug */,
+				0C615EFC1F7A0B3500B7D4D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C615EFD1F7A0B3500B7D4D0 /* Build configuration list for PBXNativeTarget "BabyBirdUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C615EFE1F7A0B3500B7D4D0 /* Debug */,
+				0C615EFF1F7A0B3500B7D4D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C615EC71F7A0B3500B7D4D0 /* Project object */;
+}

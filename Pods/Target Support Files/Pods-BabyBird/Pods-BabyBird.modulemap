@@ -1,0 +1,6 @@
+framework module Pods_BabyBird {
+  umbrella header "Pods-BabyBird-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_BabyBirdTests {
+  umbrella header "Pods-BabyBirdTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
