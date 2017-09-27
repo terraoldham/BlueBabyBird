@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C443E5E1F7B6F6900CD992E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443E5D1F7B6F6900CD992E /* User.swift */; };
+		0C443E601F7B6F7200CD992E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443E5F1F7B6F7200CD992E /* Tweet.swift */; };
 		0C52238A1F7A0C02001873CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5223891F7A0C02001873CE /* LoginViewController.swift */; };
 		0C615ED31F7A0B3500B7D4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */; };
 		0C615ED51F7A0B3500B7D4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615ED41F7A0B3500B7D4D0 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		0726752897BD2CE4C9555A81 /* Pods-BabyBirdUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdUITests/Pods-BabyBirdUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C443E5D1F7B6F6900CD992E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0C443E5F1F7B6F7200CD992E /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		0C5223891F7A0C02001873CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0C615ECF1F7A0B3500B7D4D0 /* BabyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C443E5A1F7B6F1200CD992E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C443E5D1F7B6F6900CD992E /* User.swift */,
+				0C443E5F1F7B6F7200CD992E /* Tweet.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0C443E5B1F7B6F1700CD992E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C615ED41F7A0B3500B7D4D0 /* ViewController.swift */,
+				0C5223891F7A0C02001873CE /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0C443E5C1F7B6F3000CD992E /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		0C615EC61F7A0B3500B7D4D0 = {
 			isa = PBXGroup;
 			children = (
@@ -116,10 +145,11 @@
 		0C615ED11F7A0B3500B7D4D0 /* BabyBird */ = {
 			isa = PBXGroup;
 			children = (
+				0C443E5C1F7B6F3000CD992E /* API */,
+				0C443E5B1F7B6F1700CD992E /* View Controllers */,
+				0C443E5A1F7B6F1200CD992E /* Models */,
 				0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */,
-				0C615ED41F7A0B3500B7D4D0 /* ViewController.swift */,
 				0C615ED61F7A0B3500B7D4D0 /* Main.storyboard */,
-				0C5223891F7A0C02001873CE /* LoginViewController.swift */,
 				0C615ED91F7A0B3500B7D4D0 /* Assets.xcassets */,
 				0C615EDB1F7A0B3500B7D4D0 /* LaunchScreen.storyboard */,
 				0C615EDE1F7A0B3500B7D4D0 /* Info.plist */,
@@ -463,6 +493,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C443E5E1F7B6F6900CD992E /* User.swift in Sources */,
+				0C443E601F7B6F7200CD992E /* Tweet.swift in Sources */,
 				0C52238A1F7A0C02001873CE /* LoginViewController.swift in Sources */,
 				0C615ED51F7A0B3500B7D4D0 /* ViewController.swift in Sources */,
 				0C615ED31F7A0B3500B7D4D0 /* AppDelegate.swift in Sources */,
