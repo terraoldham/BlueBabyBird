@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C443E5E1F7B6F6900CD992E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443E5D1F7B6F6900CD992E /* User.swift */; };
 		0C443E601F7B6F7200CD992E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443E5F1F7B6F7200CD992E /* Tweet.swift */; };
+		0C443E661F7C794800CD992E /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443E651F7C794800CD992E /* TwitterClient.swift */; };
 		0C52238A1F7A0C02001873CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5223891F7A0C02001873CE /* LoginViewController.swift */; };
 		0C615ED31F7A0B3500B7D4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */; };
 		0C615ED51F7A0B3500B7D4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615ED41F7A0B3500B7D4D0 /* ViewController.swift */; };
@@ -17,6 +18,8 @@
 		0C615EDD1F7A0B3500B7D4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C615EDB1F7A0B3500B7D4D0 /* LaunchScreen.storyboard */; };
 		0C615EE81F7A0B3500B7D4D0 /* BabyBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615EE71F7A0B3500B7D4D0 /* BabyBirdTests.swift */; };
 		0C615EF31F7A0B3500B7D4D0 /* BabyBirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C615EF21F7A0B3500B7D4D0 /* BabyBirdUITests.swift */; };
+		0CCA0DE91F7DD0E900669D62 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA0DE81F7DD0E900669D62 /* TweetsViewController.swift */; };
+		0CCA0DEB1F7DD32800669D62 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA0DEA1F7DD32800669D62 /* TweetCell.swift */; };
 		3FB6BC67CF56289D14755AC2 /* Pods_BabyBirdTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19AAE079BF86254EB0B0137 /* Pods_BabyBirdTests.framework */; };
 		6A307C46F5BC11CC84D1C3C6 /* Pods_BabyBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */; };
 		EB201EB2D5128FE4093A1F08 /* Pods_BabyBirdUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */; };
@@ -43,6 +46,7 @@
 		0726752897BD2CE4C9555A81 /* Pods-BabyBirdUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdUITests/Pods-BabyBirdUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0C443E5D1F7B6F6900CD992E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0C443E5F1F7B6F7200CD992E /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		0C443E651F7C794800CD992E /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		0C5223891F7A0C02001873CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0C615ECF1F7A0B3500B7D4D0 /* BabyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		0C615EEE1F7A0B3500B7D4D0 /* BabyBirdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyBirdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C615EF21F7A0B3500B7D4D0 /* BabyBirdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyBirdUITests.swift; sourceTree = "<group>"; };
 		0C615EF41F7A0B3500B7D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CCA0DE81F7DD0E900669D62 /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
+		0CCA0DEA1F7DD32800669D62 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBirdUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38659B2171825FF3AA2FAA03 /* Pods-BabyBirdTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdTests/Pods-BabyBirdTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 			children = (
 				0C615ED41F7A0B3500B7D4D0 /* ViewController.swift */,
 				0C5223891F7A0C02001873CE /* LoginViewController.swift */,
+				0CCA0DE81F7DD0E900669D62 /* TweetsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 		0C443E5C1F7B6F3000CD992E /* API */ = {
 			isa = PBXGroup;
 			children = (
+				0C443E651F7C794800CD992E /* TwitterClient.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 		0C615EC61F7A0B3500B7D4D0 = {
 			isa = PBXGroup;
 			children = (
+				0CCA0DEA1F7DD32800669D62 /* TweetCell.swift */,
 				0C615ED11F7A0B3500B7D4D0 /* BabyBird */,
 				0C615EE61F7A0B3500B7D4D0 /* BabyBirdTests */,
 				0C615EF11F7A0B3500B7D4D0 /* BabyBirdUITests */,
@@ -496,7 +505,10 @@
 				0C443E5E1F7B6F6900CD992E /* User.swift in Sources */,
 				0C443E601F7B6F7200CD992E /* Tweet.swift in Sources */,
 				0C52238A1F7A0C02001873CE /* LoginViewController.swift in Sources */,
+				0CCA0DEB1F7DD32800669D62 /* TweetCell.swift in Sources */,
 				0C615ED51F7A0B3500B7D4D0 /* ViewController.swift in Sources */,
+				0CCA0DE91F7DD0E900669D62 /* TweetsViewController.swift in Sources */,
+				0C443E661F7C794800CD992E /* TwitterClient.swift in Sources */,
 				0C615ED31F7A0B3500B7D4D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
