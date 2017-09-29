@@ -30,6 +30,8 @@ class User: NSObject {
         
     }
     
+    static let userDidLogoutNotification = "userDidLogout"
+    
     static var _currentUser: User?
     
     class var currentUser: User? {

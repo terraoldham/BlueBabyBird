@@ -90,7 +90,13 @@
                             <constraint firstItem="y8H-fC-1hh" firstAttribute="top" secondItem="ssE-sh-3k6" secondAttribute="top" id="v6G-xM-W0Y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Yua-2e-dbo"/>
+                    <navigationItem key="navigationItem" id="Yua-2e-dbo">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="J02-HK-u3D">
+                            <connections>
+                                <action selector="logoutButton:" destination="RcQ-ea-1JY" id="lRP-uJ-Pbo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="y8H-fC-1hh" id="086-V6-lMg"/>
                     </connections>
