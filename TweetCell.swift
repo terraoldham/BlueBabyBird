@@ -19,6 +19,9 @@ class TweetCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        photoView.layer.cornerRadius = (photoView.frame.width / 2)
+        photoView.layer.masksToBounds = true
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,6 +36,7 @@ class TweetCell: UITableViewCell {
             screennameLabel.text = "@" + (tweet.user?.screenname)!
             nameLabel.text = tweet.user?.name
             timestampLabel.text = tweet.sinceTweet!
+            photoView.setImageWith((tweet.user?.profileUrl)!)
         }
     }
 

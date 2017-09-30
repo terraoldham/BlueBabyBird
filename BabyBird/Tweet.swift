@@ -31,7 +31,6 @@ class Tweet: NSObject {
             timestamp = formatter.date(from: timestampString!) as! NSDate
             sinceTweet = formatter.timeSince(from: timestamp!, numericDates: true)
         }
-        
 
         
         if let user = dictionary["user"] as? NSDictionary {
@@ -54,7 +53,7 @@ class Tweet: NSObject {
 extension DateFormatter {
     /**
      Formats a date as the time since that date (e.g., “Last week, yesterday, etc.”).
-     Resource: https://samoylov.eu/2016/09/19/implementing-time-since-function-in-swift-3/
+     Adapted from: https://samoylov.eu/2016/09/19/implementing-time-since-function-in-swift-3/
      - Parameter from: The date to process.
      - Parameter numericDates: Determines if we should return a numeric variant, e.g. "1 month ago" vs. "Last month"
      - Returns: A string with formatted `date`.
@@ -68,30 +67,8 @@ extension DateFormatter {
         
         var result = ""
         
-        if components.year! >= 2 {
-            result = "\(components.year!) years ago"
-        } else if components.year! >= 1 {
-            if numericDates {
-                result = "1 year ago"
-            } else {
-                result = "Last year"
-            }
-        } else if components.month! >= 2 {
-            result = "\(components.month!) months ago"
-        } else if components.month! >= 1 {
-            if numericDates {
-                result = "1 month ago"
-            } else {
-                result = "Last month"
-            }
-        } else if components.weekOfYear! >= 2 {
-            result = "\(components.weekOfYear!) weeks ago"
-        } else if components.weekOfYear! >= 1 {
-            if numericDates {
-                result = "1 week ago"
-            } else {
-                result = "Last week"
-            }
+        if components.weekOfYear! >= 1 {
+            result = "\(components.month!)" + "\(components.day!)" + "\(components.year!)"
         } else if components.day! >= 2 {
             result = "\(components.day!)d"
         } else if components.day! >= 1 {
@@ -121,7 +98,6 @@ extension DateFormatter {
         } else {
             result = "Just now"
         }
-        
         return result
     }
 }

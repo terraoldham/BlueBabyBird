@@ -17,6 +17,10 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -24,14 +28,10 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) in
             self.tweets = tweets
-            for tweet in self.tweets {
-                print(tweet)
-            }
             self.tableView.reloadData()
         }, failure: { (error: Error) in
             print(error.localizedDescription)
         })
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,6 +53,30 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func logoutButton(_ sender: Any) {
         TwitterClient.sharedInstance?.logout()
     }
+    
+    func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        
+        TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) in
+            self.tweets = tweets
+            refreshControl.endRefreshing()
+            self.tableView.reloadData()
+        }, failure: { (error: Error) in
+            print(error.localizedDescription)
+        })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! DetailsViewController
+        let cell = sender as! UITableViewCell!
+        let indexPath = tableView.indexPath(for: cell!)!
+        let tweet = self.tweets[indexPath.row]
+        vc.tweet = tweet
+        
+    }
 
+    @IBAction func onComposeButton(_ sender: Any) {
+        performSegue(withIdentifier: "composeSegue", sender: self)
+    }
+    
 
 }
