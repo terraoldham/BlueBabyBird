@@ -26,6 +26,8 @@
 		0CD90EEA1F815CFB00BCDFD4 /* grayreply.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EE61F815CFB00BCDFD4 /* grayreply.png */; };
 		0CD90EEB1F815CFB00BCDFD4 /* graymessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EE71F815CFB00BCDFD4 /* graymessage.png */; };
 		0CD90EEC1F815CFB00BCDFD4 /* grayheart.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EE81F815CFB00BCDFD4 /* grayheart.png */; };
+		0CD90EEF1F817CEC00BCDFD4 /* greenretweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EED1F817CEC00BCDFD4 /* greenretweet.png */; };
+		0CD90EF01F817CEC00BCDFD4 /* pinkheart.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EEE1F817CEC00BCDFD4 /* pinkheart.png */; };
 		3FB6BC67CF56289D14755AC2 /* Pods_BabyBirdTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19AAE079BF86254EB0B0137 /* Pods_BabyBirdTests.framework */; };
 		6A307C46F5BC11CC84D1C3C6 /* Pods_BabyBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */; };
 		EB201EB2D5128FE4093A1F08 /* Pods_BabyBirdUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */; };
@@ -75,6 +77,8 @@
 		0CD90EE61F815CFB00BCDFD4 /* grayreply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayreply.png; path = ../../grayreply.png; sourceTree = "<group>"; };
 		0CD90EE71F815CFB00BCDFD4 /* graymessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graymessage.png; path = ../../graymessage.png; sourceTree = "<group>"; };
 		0CD90EE81F815CFB00BCDFD4 /* grayheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayheart.png; path = ../../grayheart.png; sourceTree = "<group>"; };
+		0CD90EED1F817CEC00BCDFD4 /* greenretweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenretweet.png; path = ../../greenretweet.png; sourceTree = "<group>"; };
+		0CD90EEE1F817CEC00BCDFD4 /* pinkheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pinkheart.png; path = ../../pinkheart.png; sourceTree = "<group>"; };
 		1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBirdUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38659B2171825FF3AA2FAA03 /* Pods-BabyBirdTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdTests/Pods-BabyBirdTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,7 +178,9 @@
 				0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */,
 				0C615ED61F7A0B3500B7D4D0 /* Main.storyboard */,
 				0C615ED91F7A0B3500B7D4D0 /* Assets.xcassets */,
+				0CD90EED1F817CEC00BCDFD4 /* greenretweet.png */,
 				0CD90EE51F815CFB00BCDFD4 /* grayretweet.png */,
+				0CD90EEE1F817CEC00BCDFD4 /* pinkheart.png */,
 				0CD90EE61F815CFB00BCDFD4 /* grayreply.png */,
 				0CD90EE71F815CFB00BCDFD4 /* graymessage.png */,
 				0CD90EE81F815CFB00BCDFD4 /* grayheart.png */,
@@ -341,10 +347,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD90EF01F817CEC00BCDFD4 /* pinkheart.png in Resources */,
 				0C615EDD1F7A0B3500B7D4D0 /* LaunchScreen.storyboard in Resources */,
 				0CD90EEC1F815CFB00BCDFD4 /* grayheart.png in Resources */,
 				0CD90EEA1F815CFB00BCDFD4 /* grayreply.png in Resources */,
 				0CD90EEB1F815CFB00BCDFD4 /* graymessage.png in Resources */,
+				0CD90EEF1F817CEC00BCDFD4 /* greenretweet.png in Resources */,
 				0CD90EE91F815CFB00BCDFD4 /* grayretweet.png in Resources */,
 				0C615EDA1F7A0B3500B7D4D0 /* Assets.xcassets in Resources */,
 				0C615ED81F7A0B3500B7D4D0 /* Main.storyboard in Resources */,
