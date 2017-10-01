@@ -22,14 +22,10 @@
 		0CCA0DEB1F7DD32800669D62 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA0DEA1F7DD32800669D62 /* TweetCell.swift */; };
 		0CD90ED21F7F14A700BCDFD4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD90ED11F7F14A700BCDFD4 /* DetailsViewController.swift */; };
 		0CD90ED41F7F14ED00BCDFD4 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD90ED31F7F14ED00BCDFD4 /* ComposeViewController.swift */; };
-		0CD90ED91F7F236A00BCDFD4 /* 001-message.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90ED51F7F236A00BCDFD4 /* 001-message.png */; };
-		0CD90EDA1F7F236A00BCDFD4 /* 002-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90ED61F7F236A00BCDFD4 /* 002-heart.png */; };
-		0CD90EDB1F7F236A00BCDFD4 /* 003-arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90ED71F7F236A00BCDFD4 /* 003-arrows.png */; };
-		0CD90EDC1F7F236A00BCDFD4 /* 004-direction.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90ED81F7F236A00BCDFD4 /* 004-direction.png */; };
-		0CD90EE11F7F251B00BCDFD4 /* arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EDD1F7F251B00BCDFD4 /* arrows.png */; };
-		0CD90EE21F7F251B00BCDFD4 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EDE1F7F251B00BCDFD4 /* heart.png */; };
-		0CD90EE31F7F251B00BCDFD4 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EDF1F7F251B00BCDFD4 /* message.png */; };
-		0CD90EE41F7F251B00BCDFD4 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EE01F7F251B00BCDFD4 /* reply.png */; };
+		0CD90EE91F815CFB00BCDFD4 /* grayretweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EE51F815CFB00BCDFD4 /* grayretweet.png */; };
+		0CD90EEA1F815CFB00BCDFD4 /* grayreply.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EE61F815CFB00BCDFD4 /* grayreply.png */; };
+		0CD90EEB1F815CFB00BCDFD4 /* graymessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EE71F815CFB00BCDFD4 /* graymessage.png */; };
+		0CD90EEC1F815CFB00BCDFD4 /* grayheart.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD90EE81F815CFB00BCDFD4 /* grayheart.png */; };
 		3FB6BC67CF56289D14755AC2 /* Pods_BabyBirdTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19AAE079BF86254EB0B0137 /* Pods_BabyBirdTests.framework */; };
 		6A307C46F5BC11CC84D1C3C6 /* Pods_BabyBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */; };
 		EB201EB2D5128FE4093A1F08 /* Pods_BabyBirdUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */; };
@@ -75,14 +71,10 @@
 		0CCA0DEA1F7DD32800669D62 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		0CD90ED11F7F14A700BCDFD4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		0CD90ED31F7F14ED00BCDFD4 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
-		0CD90ED51F7F236A00BCDFD4 /* 001-message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "001-message.png"; path = "../../../Downloads/my-icons-collection/png/001-message.png"; sourceTree = "<group>"; };
-		0CD90ED61F7F236A00BCDFD4 /* 002-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "002-heart.png"; path = "../../../Downloads/my-icons-collection/png/002-heart.png"; sourceTree = "<group>"; };
-		0CD90ED71F7F236A00BCDFD4 /* 003-arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "003-arrows.png"; path = "../../../Downloads/my-icons-collection/png/003-arrows.png"; sourceTree = "<group>"; };
-		0CD90ED81F7F236A00BCDFD4 /* 004-direction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "004-direction.png"; path = "../../../Downloads/my-icons-collection/png/004-direction.png"; sourceTree = "<group>"; };
-		0CD90EDD1F7F251B00BCDFD4 /* arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrows.png; path = "../../../Downloads/my-icons-collection (1)/png/arrows.png"; sourceTree = "<group>"; };
-		0CD90EDE1F7F251B00BCDFD4 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = "../../../Downloads/my-icons-collection (1)/png/heart.png"; sourceTree = "<group>"; };
-		0CD90EDF1F7F251B00BCDFD4 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = message.png; path = "../../../Downloads/my-icons-collection (1)/png/message.png"; sourceTree = "<group>"; };
-		0CD90EE01F7F251B00BCDFD4 /* reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reply.png; path = "../../../Downloads/my-icons-collection (1)/png/reply.png"; sourceTree = "<group>"; };
+		0CD90EE51F815CFB00BCDFD4 /* grayretweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayretweet.png; path = ../../grayretweet.png; sourceTree = "<group>"; };
+		0CD90EE61F815CFB00BCDFD4 /* grayreply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayreply.png; path = ../../grayreply.png; sourceTree = "<group>"; };
+		0CD90EE71F815CFB00BCDFD4 /* graymessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graymessage.png; path = ../../graymessage.png; sourceTree = "<group>"; };
+		0CD90EE81F815CFB00BCDFD4 /* grayheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayheart.png; path = ../../grayheart.png; sourceTree = "<group>"; };
 		1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBirdUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38659B2171825FF3AA2FAA03 /* Pods-BabyBirdTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdTests/Pods-BabyBirdTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,14 +174,10 @@
 				0C615ED21F7A0B3500B7D4D0 /* AppDelegate.swift */,
 				0C615ED61F7A0B3500B7D4D0 /* Main.storyboard */,
 				0C615ED91F7A0B3500B7D4D0 /* Assets.xcassets */,
-				0CD90EDD1F7F251B00BCDFD4 /* arrows.png */,
-				0CD90EDE1F7F251B00BCDFD4 /* heart.png */,
-				0CD90EDF1F7F251B00BCDFD4 /* message.png */,
-				0CD90EE01F7F251B00BCDFD4 /* reply.png */,
-				0CD90ED51F7F236A00BCDFD4 /* 001-message.png */,
-				0CD90ED61F7F236A00BCDFD4 /* 002-heart.png */,
-				0CD90ED71F7F236A00BCDFD4 /* 003-arrows.png */,
-				0CD90ED81F7F236A00BCDFD4 /* 004-direction.png */,
+				0CD90EE51F815CFB00BCDFD4 /* grayretweet.png */,
+				0CD90EE61F815CFB00BCDFD4 /* grayreply.png */,
+				0CD90EE71F815CFB00BCDFD4 /* graymessage.png */,
+				0CD90EE81F815CFB00BCDFD4 /* grayheart.png */,
 				0C615EDB1F7A0B3500B7D4D0 /* LaunchScreen.storyboard */,
 				0C615EDE1F7A0B3500B7D4D0 /* Info.plist */,
 			);
@@ -353,17 +341,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD90EDA1F7F236A00BCDFD4 /* 002-heart.png in Resources */,
-				0CD90EE21F7F251B00BCDFD4 /* heart.png in Resources */,
-				0CD90EDB1F7F236A00BCDFD4 /* 003-arrows.png in Resources */,
-				0CD90EE41F7F251B00BCDFD4 /* reply.png in Resources */,
 				0C615EDD1F7A0B3500B7D4D0 /* LaunchScreen.storyboard in Resources */,
-				0CD90EE11F7F251B00BCDFD4 /* arrows.png in Resources */,
-				0CD90ED91F7F236A00BCDFD4 /* 001-message.png in Resources */,
+				0CD90EEC1F815CFB00BCDFD4 /* grayheart.png in Resources */,
+				0CD90EEA1F815CFB00BCDFD4 /* grayreply.png in Resources */,
+				0CD90EEB1F815CFB00BCDFD4 /* graymessage.png in Resources */,
+				0CD90EE91F815CFB00BCDFD4 /* grayretweet.png in Resources */,
 				0C615EDA1F7A0B3500B7D4D0 /* Assets.xcassets in Resources */,
-				0CD90EDC1F7F236A00BCDFD4 /* 004-direction.png in Resources */,
 				0C615ED81F7A0B3500B7D4D0 /* Main.storyboard in Resources */,
-				0CD90EE31F7F251B00BCDFD4 /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,26 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController {
+@objc protocol ComposeViewControllerDelegate {
+    @objc func composeViewController(composeViewController: ComposeViewController,
+                                     tweet: Tweet)
+}
 
+class ComposeViewController: UIViewController, UITextViewDelegate {
+
+    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var tweetTextField: UITextView!
+    @IBOutlet weak var characterCount: UILabel!
+    
+    var user = User.currentUser!
+    var delegate: ComposeViewControllerDelegate?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        photoView.setImageWith((user.profileUrl)!)
+        tweetTextField.delegate = self
+        tweetTextField.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
@@ -21,15 +37,31 @@ class ComposeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textViewDidChange(_ textView: UITextView) {
+        let tweetMax = 140
+        let tweetCharCount = textView.text?.characters.count
+        let charactersRemaining = tweetMax - tweetCharCount!
+        characterCount.text = charactersRemaining.description
+        if charactersRemaining < 20 {
+            characterCount.textColor = UIColor.red
+        } else {
+            characterCount.textColor = UIColor.black
+        }
     }
-    */
+    
+    @IBAction func onTweet(_ sender: Any) {
+        TwitterClient.sharedInstance?.publishTweet(tweetTextField.text, success: { (tweet: Tweet) in
+            self.dismiss(animated: true, completion: nil)
+            self.delegate?.composeViewController(composeViewController: self, tweet: tweet)
+        }, failure: { (error: Error) in
+            print("error \(error.localizedDescription)")
+        })
+        
+    }
+    
+    @IBAction func onCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }

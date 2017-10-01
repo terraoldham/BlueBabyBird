@@ -146,7 +146,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Compose" id="MMY-wg-ULE">
                             <connections>
                                 <action selector="onComposeButton:" destination="RcQ-ea-1JY" id="iWp-1j-EXD"/>
-                                <segue destination="tN8-A5-4zn" kind="presentation" identifier="composeSegue" id="Qkp-a1-SYb"/>
+                                <segue destination="caW-XS-5Q6" kind="presentation" identifier="composeSegue" id="F7K-ea-nDH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -169,17 +169,61 @@
                     <view key="view" contentMode="scaleToFill" id="g1t-RS-2KJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-d8-frJ">
+                                <rect key="frame" x="8" y="72" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BM6-a6-hez"/>
+                                    <constraint firstAttribute="width" constant="40" id="Lg3-xL-gz6"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f0S-D3-LCc">
+                                <rect key="frame" x="8" y="120" width="359" height="197"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBk-47-MmC">
+                                <rect key="frame" x="367" y="72" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nBk-47-MmC" firstAttribute="top" secondItem="Van-Ug-qql" secondAttribute="bottom" constant="8" id="04s-Jq-ypR"/>
+                            <constraint firstAttribute="trailing" secondItem="nBk-47-MmC" secondAttribute="trailing" constant="8" id="14s-F2-47y"/>
+                            <constraint firstItem="f0S-D3-LCc" firstAttribute="leading" secondItem="hrY-d8-frJ" secondAttribute="leading" id="25p-ut-lJP"/>
+                            <constraint firstItem="UhZ-AG-AFI" firstAttribute="top" secondItem="f0S-D3-LCc" secondAttribute="bottom" constant="350" id="5TX-wf-1XW"/>
+                            <constraint firstItem="hrY-d8-frJ" firstAttribute="top" secondItem="Van-Ug-qql" secondAttribute="bottom" constant="8" id="TRX-4x-FfO"/>
+                            <constraint firstItem="hrY-d8-frJ" firstAttribute="leading" secondItem="g1t-RS-2KJ" secondAttribute="leading" constant="8" id="WpI-FO-79w"/>
+                            <constraint firstAttribute="trailing" secondItem="f0S-D3-LCc" secondAttribute="trailing" constant="8" id="p3l-a9-jOI"/>
+                            <constraint firstItem="f0S-D3-LCc" firstAttribute="top" secondItem="hrY-d8-frJ" secondAttribute="bottom" constant="8" id="xJL-Cy-5f0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G5d-EB-6w4">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ndF-u6-GBr"/>
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ktH-7P-CAk"/>
-                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="iKZ-bb-nBh"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ktH-7P-CAk">
+                            <connections>
+                                <action selector="onCancel:" destination="T9g-hz-BfW" id="pOp-qa-f7b"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="iKZ-bb-nBh">
+                            <connections>
+                                <action selector="onTweet:" destination="T9g-hz-BfW" id="Ubq-Md-2Q6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="characterCount" destination="nBk-47-MmC" id="5ok-mG-53w"/>
+                        <outlet property="photoView" destination="hrY-d8-frJ" id="9jk-Bq-Z1C"/>
+                        <outlet property="tweetTextField" destination="f0S-D3-LCc" id="l4L-Um-NEa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hps-lV-HA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4380" y="657"/>
+            <point key="canvasLocation" x="4388" y="665.21739130434787"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NwY-1t-PDi">
@@ -283,28 +327,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Lab-NJ-HGk">
                                 <rect key="frame" x="56" y="235" width="263" height="25"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reply.png" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-Gm-MNd">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayreply.png" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-Gm-MNd">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="MpB-BN-3Ej"/>
                                             <constraint firstAttribute="width" constant="25" id="WVw-Bp-4AW"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrows.png" translatesAutoresizingMaskIntoConstraints="NO" id="UI2-EE-VOO">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayretweet.png" translatesAutoresizingMaskIntoConstraints="NO" id="UI2-EE-VOO">
                                         <rect key="frame" x="79.5" y="0.0" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="5Ib-wr-IAc"/>
                                             <constraint firstAttribute="height" constant="25" id="YMv-ci-tHD"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-db-YkP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayheart.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-db-YkP">
                                         <rect key="frame" x="158.5" y="0.0" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="X5y-M0-FoT"/>
                                             <constraint firstAttribute="width" constant="25" id="fka-9J-Z2z"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gxm-xp-r6T">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graymessage.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gxm-xp-r6T">
                                         <rect key="frame" x="238" y="0.0" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="5l3-Te-7KI"/>
@@ -376,28 +420,28 @@
             <point key="canvasLocation" x="3448.8000000000002" y="-49.025487256371818"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ueT-zl-wh9">
+        <scene sceneID="zdk-sT-Ata">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tN8-A5-4zn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="caW-XS-5Q6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aoy-QF-kwv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YPb-To-vzd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="T9g-hz-BfW" kind="relationship" relationship="rootViewController" id="qqK-zs-1N7"/>
+                        <segue destination="T9g-hz-BfW" kind="relationship" relationship="rootViewController" id="XJc-vd-ytr"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jsZ-j2-vUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTx-yj-8iT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3441" y="657"/>
+            <point key="canvasLocation" x="3448.8000000000002" y="665.21739130434787"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrows.png" width="32" height="32"/>
-        <image name="heart.png" width="32" height="32"/>
-        <image name="message.png" width="32" height="32"/>
-        <image name="reply.png" width="32" height="32"/>
+        <image name="grayheart.png" width="50" height="50"/>
+        <image name="graymessage.png" width="50" height="50"/>
+        <image name="grayreply.png" width="50" height="50"/>
+        <image name="grayretweet.png" width="50" height="50"/>
     </resources>
 </document>

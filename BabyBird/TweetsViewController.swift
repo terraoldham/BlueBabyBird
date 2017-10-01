@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
 
 
@@ -45,6 +45,12 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         print(tweets![indexPath.row])
         return cell
     }
+    
+    func composeViewController(composeViewController: ComposeViewController, tweet: Tweet) {
+        self.tweets.insert(tweet, at: 0)
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,16 +72,21 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! DetailsViewController
-        let cell = sender as! UITableViewCell!
-        let indexPath = tableView.indexPath(for: cell!)!
-        let tweet = self.tweets[indexPath.row]
-        vc.tweet = tweet
-        
+        if let vc = segue.destination as? DetailsViewController {
+            let cell = sender as! UITableViewCell!
+            let indexPath = tableView.indexPath(for: cell!)!
+            let tweet = self.tweets[indexPath.row]
+            vc.tweet = tweet
+        }
+        if let nvc = segue.destination as? UINavigationController {
+            let cvc = nvc.viewControllers.first as! ComposeViewController
+            cvc.delegate = self
+        }
     }
 
     @IBAction func onComposeButton(_ sender: Any) {
-        performSegue(withIdentifier: "composeSegue", sender: self)
+
+        
     }
     
 
