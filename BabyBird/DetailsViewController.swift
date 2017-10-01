@@ -155,7 +155,6 @@ class DetailsViewController: UIViewController {
             })
         }
     }
-    
 
 
 }

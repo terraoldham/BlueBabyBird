@@ -37,6 +37,19 @@ class TwitterClient: BDBOAuth1SessionManager {
         
     }
     
+    func homeTimelineMoreTweets(_ sinceId: IntMax!, success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> ()) {
+        let parameters = ["sinceId": sinceId as AnyObject]
+        get("1.1/statuses/home_timeline.json", parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+            let dictionaries = response as! [NSDictionary]
+            let tweets = Tweet.tweetsWithArray(dictionaries: dictionaries)
+            print(dictionaries[0])
+            success(tweets)
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+        
+    }
+    
     func publishTweet(_ status: String, success: @escaping (Tweet) -> (), failure: @escaping (Error) -> ()) {
         let parameters = ["status": status as AnyObject]
         post("/1.1/statuses/update.json", parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in

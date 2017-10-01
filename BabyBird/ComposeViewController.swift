@@ -57,7 +57,7 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func onTweet(_ sender: Any) {
-        if isReply == true {
+        if isReply == false {
             TwitterClient.sharedInstance?.publishTweet(tweetTextField.text!, success: { (tweet: Tweet) in
                 self.dismiss(animated: true, completion: nil)
                 self.delegate?.composeViewController(composeViewController: self, tweet: tweet)
@@ -67,8 +67,10 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
             })
         } else {
             TwitterClient.sharedInstance?.publishResponseTweet(tweetTextField.text!, in_reply_to_status_id: replyId, success: { (tweet: Tweet) in
+                print("Tweet sent!")
                 self.dismiss(animated: true, completion: nil)
                 self.delegate?.composeViewController(composeViewController: self, tweet: tweet)
+                self.isReply = false
             }, failure: { (error: Error) in
                 print("error \(error.localizedDescription)")
             })

@@ -8,13 +8,11 @@
 
 import UIKit
 
-class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ComposeViewControllerDelegate {
+class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
 
-
-
-
     var tweets: [Tweet]!
+    var isMoreDataLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +46,16 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewContentHeight = tableView.contentSize.height
+        let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
+        
+        if(scrollView.contentOffset.y > scrollOffsetThreshold && tableView.isDragging) {
+            isMoreDataLoading = true
+            loadMoreData()
+        }
+    }
+    
     func composeViewController(composeViewController: ComposeViewController, tweet: Tweet) {
         self.tweets.insert(tweet, at: 0)
         tableView.reloadData()
@@ -72,6 +80,18 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             print(error.localizedDescription)
         })
     }
+    
+    func loadMoreData() {
+        let lastId = self.tweets.last!.idInt!
+        TwitterClient.sharedInstance?.homeTimelineMoreTweets(lastId, success: { (tweets: [Tweet]) in
+            self.tweets = self.tweets + tweets
+            self.isMoreDataLoading = false
+            self.tableView.reloadData()
+        }, failure: { (error: Error) in
+            print(error.localizedDescription)
+        })
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DetailsViewController {
