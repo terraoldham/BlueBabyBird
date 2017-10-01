@@ -480,11 +480,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="favoriteView" destination="9Wd-db-YkP" id="UGL-iN-pxH"/>
                         <outlet property="handleLabel" destination="KHV-3P-thY" id="ILQ-e6-9XP"/>
                         <outlet property="likeCountLabel" destination="FqU-B6-AyW" id="1wz-Xy-hy4"/>
+                        <outlet property="messageView" destination="Gxm-xp-r6T" id="P2v-H4-PmZ"/>
                         <outlet property="nameLabel" destination="Te8-cv-rvH" id="yBE-hu-4lG"/>
                         <outlet property="photoView" destination="nLy-Vi-niT" id="oJF-Ui-WyV"/>
+                        <outlet property="replyView" destination="C1A-Gm-MNd" id="qtP-DP-dc8"/>
                         <outlet property="retweetCountLabel" destination="pDJ-ob-W4t" id="Tzx-fG-z9v"/>
+                        <outlet property="retweetView" destination="9Wd-db-YkP" id="zPo-by-n3X"/>
                         <outlet property="textLabel" destination="A3g-hx-sRB" id="YKf-Zg-SCE"/>
                         <outlet property="timestampLabel" destination="c7R-sI-cjB" id="QO0-zt-jsN"/>
                     </connections>

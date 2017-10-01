@@ -84,7 +84,7 @@ class TwitterClient: BDBOAuth1SessionManager {
     }
     
     func unretweetTweet(_ id: IntMax, success: @escaping (Tweet) -> (), failure: @escaping (Error) -> ()) {
-        let unretweet_string = "/1.1/statuses/retweet/\(id).json" as String!
+        let unretweet_string = "/1.1/statuses/unretweet/\(id).json" as String!
         post(unretweet_string!, parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
             let dictionary = response as! NSDictionary
             let tweet = Tweet(dictionary: dictionary)

@@ -77,8 +77,13 @@ class TweetCell: UITableViewCell {
         if retweeted == true {
             retweetView.image = UIImage(named: "grayretweet.png")
             retweeted = false
+            let countBefore = tweet.retweetCount
             TwitterClient.sharedInstance?.unretweetTweet(IntMax(tweet.idInt!), success: { (tweet: Tweet) in
-                self.retweetCount.text = tweet.retweetCount.description
+                if countBefore == tweet.retweetCount {
+                    self.retweetCount.text = (tweet.retweetCount - 1).description
+                } else {
+                    self.retweetCount.text = tweet.retweetCount.description
+                }
                 print(tweet.retweetCount.description)
             }, failure: { (error: Error) in
                 print((error.localizedDescription))
@@ -86,8 +91,13 @@ class TweetCell: UITableViewCell {
         } else {
             retweetView.image = UIImage(named: "greenretweet")!
             retweeted = true
+            let countBefore = tweet.retweetCount
             TwitterClient.sharedInstance?.retweetTweet(IntMax(tweet.idInt!), success: { (tweet: Tweet) in
-                self.retweetCount.text = tweet.retweetCount.description
+                if countBefore == tweet.retweetCount {
+                    self.retweetCount.text = (tweet.retweetCount + 1).description
+                } else {
+                    self.retweetCount.text = tweet.retweetCount.description
+                }
                 print(tweet.retweetCount.description)
             }, failure: { (error: Error) in
                 print((error.localizedDescription))
@@ -99,18 +109,27 @@ class TweetCell: UITableViewCell {
     @objc func onFavoriteTap(tapGestureRecognizer: UITapGestureRecognizer) {
         if favorited == true {
             favoriteView.image = UIImage(named: "grayheart.png")
-            favorited = true
+            favorited = false
+            let countBefore = tweet.favoriteCount
             TwitterClient.sharedInstance?.unlikeTweet(id: IntMax(tweet.idInt), success: { (tweet: Tweet) in
-                self.favoriteCount.text = tweet.favoriteCount.description
-                print(tweet.favoriteCount.description)
+                if countBefore == tweet.favoriteCount {
+                    self.favoriteCount.text = (tweet.favoriteCount - 1).description
+                } else {
+                    self.favoriteCount.text = tweet.favoriteCount.description
+                }
             }, failure: { (error: Error) in
                 print((error.localizedDescription))
             })
         } else {
             favoriteView.image = UIImage(named: "pinkheart")!
-            favorited = false
-            TwitterClient.sharedInstance?.unlikeTweet(id: IntMax(tweet.idInt), success: { (tweet: Tweet) in
-                self.favoriteCount.text = tweet.favoriteCount.description
+            favorited = true
+            let countBefore = tweet.favoriteCount
+            TwitterClient.sharedInstance?.likeTweet(id: IntMax(tweet.idInt), success: { (tweet: Tweet) in
+                if countBefore == tweet.favoriteCount {
+                    self.favoriteCount.text = (tweet.favoriteCount + 1).description
+                } else {
+                    self.favoriteCount.text = tweet.favoriteCount.description
+                }
                 print(tweet.favoriteCount.description)
             }, failure: { (error: Error) in
                 print((error.localizedDescription))
