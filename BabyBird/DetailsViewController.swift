@@ -70,27 +70,55 @@ class DetailsViewController: UIViewController {
         let retweetTap = UITapGestureRecognizer(target: self, action: #selector(onRetweetTap(tapGestureRecognizer:)))
         retweetView.isUserInteractionEnabled = true
         retweetView.addGestureRecognizer(retweetTap)
+        
         let favoriteTap = UITapGestureRecognizer(target: self, action: #selector(onFavoriteTap(tapGestureRecognizer:)))
         favoriteView.isUserInteractionEnabled = true
         favoriteView.addGestureRecognizer(favoriteTap)
+        
+        let replyTap = UITapGestureRecognizer(target: self, action: #selector(onReplyTap(tapGestureRecognizer:)))
+        replyView.isUserInteractionEnabled = true
+        replyView.addGestureRecognizer(replyTap)
+    }
+    
+    @objc func onReplyTap(tapGestureRecognizer: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "replyToTweet", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "replyToTweet" {
+            let nvc = segue.destination as! UINavigationController
+            let cvc = nvc.topViewController as! ComposeViewController
+            cvc.handleToReply = tweet.user?.screenname
+            cvc.isReply = true
+            cvc.replyId = tweet.idInt
+        }
     }
     
     @objc func onRetweetTap(tapGestureRecognizer: UITapGestureRecognizer) {
         if retweeted == true {
             retweetView.image = UIImage(named: "grayretweet.png")
             retweeted = false
+            let countBefore = tweet.retweetCount
             TwitterClient.sharedInstance?.unretweetTweet(IntMax(tweet.idInt!), success: { (tweet: Tweet) in
-                self.retweetCountLabel.text = tweet.retweetCount.description
                 print(tweet.retweetCount.description)
+                if countBefore == tweet.retweetCount {
+                    self.retweetCountLabel.text = (tweet.retweetCount - 1).description
+                } else {
+                    self.retweetCountLabel.text = tweet.retweetCount.description
+                }
             }, failure: { (error: Error) in
                 print((error.localizedDescription))
             })
         } else {
             retweetView.image = UIImage(named: "greenretweet")!
             retweeted = true
+            let countBefore = tweet.retweetCount
             TwitterClient.sharedInstance?.retweetTweet(IntMax(tweet.idInt!), success: { (tweet: Tweet) in
-                self.retweetCountLabel.text = tweet.retweetCount.description
-                print(tweet.retweetCount.description)
+                if countBefore == tweet.retweetCount {
+                    self.retweetCountLabel.text = (tweet.retweetCount + 1).description
+                } else {
+                    self.retweetCountLabel.text = tweet.retweetCount.description
+                }
             }, failure: { (error: Error) in
                 print((error.localizedDescription))
             })
@@ -101,23 +129,33 @@ class DetailsViewController: UIViewController {
     @objc func onFavoriteTap(tapGestureRecognizer: UITapGestureRecognizer) {
         if favorited == true {
             favoriteView.image = UIImage(named: "grayheart.png")
-            favorited = true
+            favorited = false
+            let countBefore = tweet.favoriteCount
             TwitterClient.sharedInstance?.unlikeTweet(id: IntMax(tweet.idInt), success: { (tweet: Tweet) in
-                self.likeCountLabel.text = tweet.favoriteCount.description
-                print(tweet.favoriteCount.description)
+                if countBefore == tweet.favoriteCount {
+                    self.likeCountLabel.text = (tweet.favoriteCount - 1).description
+                } else {
+                    self.likeCountLabel.text = tweet.favoriteCount.description
+                }
             }, failure: { (error: Error) in
                 print((error.localizedDescription))
             })
         } else {
             favoriteView.image = UIImage(named: "pinkheart")!
-            favorited = false
-            TwitterClient.sharedInstance?.unlikeTweet(id: IntMax(tweet.idInt), success: { (tweet: Tweet) in
-                self.likeCountLabel.text = tweet.favoriteCount.description
-                print(tweet.favoriteCount.description)
+            favorited = true
+            let countBefore = tweet.favoriteCount
+            TwitterClient.sharedInstance?.likeTweet(id: IntMax(tweet.idInt), success: { (tweet: Tweet) in
+                if countBefore == tweet.favoriteCount {
+                    self.likeCountLabel.text = (tweet.favoriteCount + 1).description
+                } else {
+                    self.likeCountLabel.text = tweet.favoriteCount.description
+                }
             }, failure: { (error: Error) in
                 print((error.localizedDescription))
             })
         }
     }
+    
+
 
 }

@@ -22,12 +22,19 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
     var user = User.currentUser!
     var delegate: ComposeViewControllerDelegate?
     
+    var handleToReply: String!
+    var isReply: Bool! = false
+    var replyId: IntMax!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         photoView.setImageWith((user.profileUrl)!)
         tweetTextField.delegate = self
         tweetTextField.becomeFirstResponder()
+        
+        if isReply {
+            tweetTextField.text = ("@" + handleToReply + " ") as String!
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -50,12 +57,22 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func onTweet(_ sender: Any) {
-        TwitterClient.sharedInstance?.publishTweet(tweetTextField.text, success: { (tweet: Tweet) in
-            self.dismiss(animated: true, completion: nil)
-            self.delegate?.composeViewController(composeViewController: self, tweet: tweet)
-        }, failure: { (error: Error) in
-            print("error \(error.localizedDescription)")
-        })
+        if isReply == true {
+            TwitterClient.sharedInstance?.publishTweet(tweetTextField.text!, success: { (tweet: Tweet) in
+                self.dismiss(animated: true, completion: nil)
+                self.delegate?.composeViewController(composeViewController: self, tweet: tweet)
+                print("Tweet sent!")
+            }, failure: { (error: Error) in
+                print("error \(error.localizedDescription)")
+            })
+        } else {
+            TwitterClient.sharedInstance?.publishResponseTweet(tweetTextField.text!, in_reply_to_status_id: replyId, success: { (tweet: Tweet) in
+                self.dismiss(animated: true, completion: nil)
+                self.delegate?.composeViewController(composeViewController: self, tweet: tweet)
+            }, failure: { (error: Error) in
+                print("error \(error.localizedDescription)")
+            })
+        }
         
     }
     

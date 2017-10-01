@@ -49,6 +49,18 @@ class TwitterClient: BDBOAuth1SessionManager {
         
     }
     
+    func publishResponseTweet(_ status: String, in_reply_to_status_id: IntMax, success: @escaping (Tweet) -> (), failure: @escaping (Error) -> ()) {
+        let parameters = ["status": status as AnyObject, "in_reply_to_status_id": in_reply_to_status_id] as [String : Any]
+        post("/1.1/statuses/update.json", parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+            let dictionary = response as! NSDictionary
+            let tweet = Tweet(dictionary: dictionary)
+            success(tweet)
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+        
+    }
+    
     func likeTweet(id: IntMax, success: @escaping (Tweet) -> (), failure: @escaping (Error) -> ()) {
         post("/1.1/favorites/create.json", parameters: ["id": id], progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
             let dictionary = response as! NSDictionary

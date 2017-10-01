@@ -289,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hps-lV-HA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4388" y="665.21739130434787"/>
+            <point key="canvasLocation" x="4935" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NwY-1t-PDi">
@@ -395,10 +395,14 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayreply.png" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-Gm-MNd">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="MpB-BN-3Ej"/>
                                             <constraint firstAttribute="width" constant="25" id="WVw-Bp-4AW"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3LI-KI-W9i" appends="YES" id="f3m-Cf-qR2"/>
+                                        </connections>
                                     </imageView>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayretweet.png" translatesAutoresizingMaskIntoConstraints="NO" id="UI2-EE-VOO">
                                         <rect key="frame" x="79.5" y="0.0" width="25" height="25"/>
@@ -494,8 +498,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KaV-FI-40I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ch7-NJ-f0N"/>
+                <tapGestureRecognizer id="ch7-NJ-f0N">
+                    <connections>
+                        <segue destination="caW-XS-5Q6" kind="presentation" identifier="replyToTweet" id="9rU-I9-Pls"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="WMd-YH-Pic"/>
+                <tapGestureRecognizer id="3LI-KI-W9i"/>
             </objects>
             <point key="canvasLocation" x="3448.8000000000002" y="-49.025487256371818"/>
         </scene>
@@ -515,7 +524,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTx-yj-8iT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3448.8000000000002" y="665.21739130434787"/>
+            <point key="canvasLocation" x="4273" y="166"/>
         </scene>
     </scenes>
     <resources>
@@ -524,4 +533,7 @@
         <image name="grayreply.png" width="50" height="50"/>
         <image name="grayretweet.png" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9rU-I9-Pls"/>
+    </inferredMetricsTieBreakers>
 </document>
