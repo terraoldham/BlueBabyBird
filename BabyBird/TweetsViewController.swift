@@ -11,8 +11,10 @@ import UIKit
 class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
 
+
     var tweets: [Tweet]!
     var isMoreDataLoading = false
+    var tweetedFrom: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(tweets?.count)
         return tweets?.count ?? 0
     }
 
@@ -107,9 +108,39 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     @IBAction func onComposeButton(_ sender: Any) {
-
-        
     }
     
+    @IBAction func onMenuClick(_ sender: Any) {
+        let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint(x: 0,y :0), to:self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: buttonPosition)
+        let tweet = self.tweets[(indexPath?.row)!]
+        tweetedFrom = tweet.user?.screenname as String!
+
+        let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Share Tweet Via...", style: .default, handler: { (action) in
+            // Action items here
+        }))
+        ac.addAction(UIAlertAction(title: "Add to Moment", style: .default, handler: { (action) in
+            // Action items here
+        }))
+        ac.addAction(UIAlertAction(title: "I don't like this Tweet", style: .default, handler: { (action) in
+            // Action items here
+        }))
+        ac.addAction(UIAlertAction(title: "Follow @" + tweetedFrom, style: .default, handler: { (action) in
+            // Action items here
+        }))
+        ac.addAction(UIAlertAction(title: "Mute @" + tweetedFrom, style: .default, handler: { (action) in
+            // Action items here
+        }))
+        ac.addAction(UIAlertAction(title: "Block @" + tweetedFrom, style: .default, handler: { (action) in
+            // Action items here
+        }))
+        ac.addAction(UIAlertAction(title: "Report Tweet", style: .default, handler: { (action) in
+            // Action items here
+        }))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(ac, animated: true, completion: nil)
+    }
 
 }

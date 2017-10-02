@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c3-UR-0Dz">
-                                <rect key="frame" x="25" y="395" width="319" height="130"/>
+                                <rect key="frame" x="0.0" y="180" width="375" height="487"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login With Twitter">
@@ -33,10 +33,15 @@
                                     <action selector="onLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFX-qy-AuL"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-mB-s0x">
+                                <rect key="frame" x="125" y="271" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="1c3-UR-0Dz" id="3GJ-S8-HB7"/>
                         <segue destination="tbS-8P-m5c" kind="presentation" identifier="loginSegue" id="8nh-zk-D3i"/>
                     </connections>
                 </viewController>
@@ -44,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
-        <!--Tweets View Controller-->
+        <!--Home-->
         <scene sceneID="gWW-Bw-tfZ">
             <objects>
                 <viewController id="RcQ-ea-1JY" customClass="TweetsViewController" customModule="BabyBird" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,11 +157,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4r-e6-vm1">
+                                                    <rect key="frame" x="342" y="8" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="4zT-9S-B9F"/>
+                                                        <constraint firstAttribute="height" constant="25" id="LHu-BM-WCR"/>
+                                                    </constraints>
+                                                    <state key="normal" image="graydown"/>
+                                                    <connections>
+                                                        <action selector="onMenuClick:" destination="RcQ-ea-1JY" eventType="touchUpInside" id="ymi-FR-BP4"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Opl-wS-7Fz" firstAttribute="leading" secondItem="lHj-zW-zrX" secondAttribute="trailing" constant="6" id="0E4-EB-2Yl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="6wK-mr-Vuj" secondAttribute="trailing" constant="32" id="1S3-Jk-q1z"/>
                                                 <constraint firstItem="Opl-wS-7Fz" firstAttribute="top" secondItem="0p7-0m-Eb2" secondAttribute="top" id="1U9-OL-Oha"/>
+                                                <constraint firstAttribute="trailing" secondItem="I4r-e6-vm1" secondAttribute="trailing" constant="8" id="1w1-yE-LOK"/>
                                                 <constraint firstItem="lHj-zW-zrX" firstAttribute="leading" secondItem="0p7-0m-Eb2" secondAttribute="trailing" constant="8" id="2cx-0S-Lcq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="VbZ-5M-fgU" secondAttribute="trailing" constant="8" id="3Mc-fL-oFx"/>
                                                 <constraint firstItem="lf4-Qi-YvB" firstAttribute="leading" secondItem="lHj-zW-zrX" secondAttribute="leading" constant="107" id="5MA-2b-GqY"/>
@@ -173,6 +190,8 @@
                                                 <constraint firstItem="6wK-mr-Vuj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VbZ-5M-fgU" secondAttribute="bottom" constant="8" id="Sfz-u2-l6g"/>
                                                 <constraint firstItem="9db-KZ-Sf4" firstAttribute="leading" secondItem="lHj-zW-zrX" secondAttribute="leading" constant="186" id="UyM-Yg-Hcr"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0p7-0m-Eb2" secondAttribute="bottom" constant="30.5" id="YcP-2H-shl"/>
+                                                <constraint firstItem="I4r-e6-vm1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mz6-Pc-08x" secondAttribute="trailing" constant="8" id="bUx-m1-oPO"/>
+                                                <constraint firstItem="I4r-e6-vm1" firstAttribute="top" secondItem="0p7-0m-Eb2" secondAttribute="top" id="c4f-BJ-Ral"/>
                                                 <constraint firstItem="0p7-0m-Eb2" firstAttribute="top" secondItem="GYb-le-UMy" secondAttribute="top" constant="8" id="iNv-Cl-2Gl"/>
                                                 <constraint firstItem="lHj-zW-zrX" firstAttribute="top" secondItem="0p7-0m-Eb2" secondAttribute="top" id="yIj-bY-ff1"/>
                                             </constraints>
@@ -201,7 +220,7 @@
                             <constraint firstItem="y8H-fC-1hh" firstAttribute="top" secondItem="ssE-sh-3k6" secondAttribute="top" id="v6G-xM-W0Y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Yua-2e-dbo">
+                    <navigationItem key="navigationItem" title="Home" id="Yua-2e-dbo">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="J02-HK-u3D">
                             <connections>
                                 <action selector="logoutButton:" destination="RcQ-ea-1JY" id="lRP-uJ-Pbo"/>
@@ -528,12 +547,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="graydown" width="192" height="192"/>
         <image name="grayheart.png" width="50" height="50"/>
         <image name="graymessage.png" width="50" height="50"/>
         <image name="grayreply.png" width="50" height="50"/>
         <image name="grayretweet.png" width="50" height="50"/>
+        <image name="twitter" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9rU-I9-Pls"/>
+        <segue reference="F7K-ea-nDH"/>
     </inferredMetricsTieBreakers>
 </document>
