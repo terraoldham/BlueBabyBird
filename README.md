@@ -2,7 +2,7 @@
 
 **BlueBabyBird** is a basic twitter app to read and compose tweets from the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **X** hours spent in total
+Time spent: **16** hours spent in total
 
 ## User Stories
 
@@ -43,7 +43,8 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![alt
+text](https://github.com/terraoldham/BlueBabyBird/blob/master/Twitter.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
