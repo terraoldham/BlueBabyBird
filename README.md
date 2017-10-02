@@ -27,12 +27,17 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [X] Added UI improvements/color
+- [X] Updated login screen graphics
+- [X] Added red color to tweet counter when characters left dropped
+  below 20
+- [X] Added menu that users see when you click the menu button on a
+  tweet.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. User design, further style guides
+2. Animations
 
 ## Video Walkthrough
 
