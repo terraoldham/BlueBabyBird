@@ -2,7 +2,7 @@
 
 **BlueBabyBird** is a basic twitter app to read and compose tweets from the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **16** hours spent in total
+Time spent: **19** hours spent in total
 
 ## User Stories
 
