@@ -48,6 +48,12 @@ Here's a walkthrough of implemented user stories:
 
 ![alt
 text](https://github.com/terraoldham/BlueBabyBird/blob/master/Twitter.gif)
+![alt
+text](https://github.com/terraoldham/BlueBabyBird/blob/master/TwitterPic1.png)
+![alt
+text](https://github.com/terraoldham/BlueBabyBird/blob/master/TwitterPic2.png)
+
+Photos show that tweet was properly liked and retweeted from the app.
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
