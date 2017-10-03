@@ -25,16 +25,12 @@ class TweetCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         photoView.layer.cornerRadius = (photoView.frame.width / 2)
         photoView.layer.masksToBounds = true
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     var tweet: Tweet! {
@@ -49,7 +45,6 @@ class TweetCell: UITableViewCell {
             
             setImages()
             initializeTapGestures()
-            
         }
     }
     
@@ -59,7 +54,6 @@ class TweetCell: UITableViewCell {
         } else {
             retweetView.image = UIImage(named: "greenretweet")
         }
-        
         if favorited == false {
             favoriteView.image = UIImage(named: "grayheart.png")!
         } else {

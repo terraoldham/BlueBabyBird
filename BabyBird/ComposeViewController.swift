@@ -35,13 +35,10 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
         if isReply {
             tweetTextField.text = ("@" + handleToReply + " ") as String!
         }
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func textViewDidChange(_ textView: UITextView) {

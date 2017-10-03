@@ -125,7 +125,6 @@ class DetailsViewController: UIViewController {
                 print((error.localizedDescription))
             })
         }
-        
     }
     
     @objc func onFavoriteTap(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -157,6 +156,4 @@ class DetailsViewController: UIViewController {
             })
         }
     }
-
-
 }

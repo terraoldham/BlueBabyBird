@@ -106,9 +106,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             cvc.delegate = self
         }
     }
-
-    @IBAction func onComposeButton(_ sender: Any) {
-    }
     
     @IBAction func onMenuClick(_ sender: Any) {
         let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint(x: 0,y :0), to:self.tableView)
