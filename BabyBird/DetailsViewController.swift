@@ -45,6 +45,16 @@ class DetailsViewController: UIViewController {
         favorited = tweet.favorited
         retweeted = tweet.retweeted
         
+        setImages()
+        initializeTapGestures()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func setImages() {
         if retweeted == false {
             retweetView.image = UIImage(named: "grayretweet.png")!
         } else {
@@ -56,15 +66,7 @@ class DetailsViewController: UIViewController {
         } else {
             favoriteView.image = UIImage(named: "pinkheart")
         }
-        
-        initializeTapGestures()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     func initializeTapGestures() {
         let retweetTap = UITapGestureRecognizer(target: self, action: #selector(onRetweetTap(tapGestureRecognizer:)))

@@ -47,20 +47,23 @@ class TweetCell: UITableViewCell {
             favoriteCount.text = tweet.favoriteCount.description
             retweetCount.text = tweet.retweetCount.description
             
-            if retweeted == false {
-                retweetView.image = UIImage(named: "grayretweet.png")!
-            } else {
-                retweetView.image = UIImage(named: "greenretweet")
-            }
-            
-            if favorited == false {
-                favoriteView.image = UIImage(named: "grayheart.png")!
-            } else {
-                favoriteView.image = UIImage(named: "pinkheart")
-            }
-            
+            setImages()
             initializeTapGestures()
             
+        }
+    }
+    
+    func setImages() {
+        if retweeted == false {
+            retweetView.image = UIImage(named: "grayretweet.png")!
+        } else {
+            retweetView.image = UIImage(named: "greenretweet")
+        }
+        
+        if favorited == false {
+            favoriteView.image = UIImage(named: "grayheart.png")!
+        } else {
+            favoriteView.image = UIImage(named: "pinkheart")
         }
     }
     
