@@ -67,10 +67,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func logoutButton(_ sender: Any) {
-        TwitterClient.sharedInstance?.logout()
-    }
-    
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
         
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) in
@@ -93,6 +89,9 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         })
     }
 
+    @IBAction func onRetweet(_ sender: Any) {
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DetailsViewController {
