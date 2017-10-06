@@ -25,9 +25,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        homeTimelineViewController = storyboard.instantiateViewController(withIdentifier: "HomeTimelineViewController")
-        profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
-        mentionsViewController = storyboard.instantiateViewController(withIdentifier: "MentionsViewController")
+        homeTimelineViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
+        profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileNavigationController")
+        mentionsViewController = storyboard.instantiateViewController(withIdentifier: "MentionsNavigationController")
         
         viewControllers.append(homeTimelineViewController)
         viewControllers.append(profileViewController)
