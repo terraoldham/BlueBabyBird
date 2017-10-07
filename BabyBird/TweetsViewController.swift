@@ -88,10 +88,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             print(error.localizedDescription)
         })
     }
-
-    @IBAction func onRetweet(_ sender: Any) {
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DetailsViewController {
