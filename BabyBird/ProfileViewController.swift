@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var nameLabel: UILabel!
     
     var user = User.currentUser!
     var tweets: [Tweet]!
@@ -70,8 +69,13 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
         return 250
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UITableViewCell? {
+        let  headerCell = tableView.dequeueReusableCell(withIdentifier: "ProfileHeaderCell") as! ProfileHeaderCell
+        headerCell.backgroundColor = UIColor.cyan
+        headerCell.user = User.currentUser!
+        print(headerCell.user.name)
+        print(headerCell.user.screenname)
+        return headerCell
     }
 
 }

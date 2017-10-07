@@ -1000,7 +1000,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="yXh-U9-Jeb"/>
                     <connections>
-                        <outlet property="nameLabel" destination="7KM-pT-MEo" id="Ea4-GW-ZpD"/>
                         <outlet property="tableView" destination="XVt-aO-Kr9" id="n1H-nY-wtO"/>
                     </connections>
                 </viewController>
