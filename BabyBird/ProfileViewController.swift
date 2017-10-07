@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var user = User.currentUser!
     var tweets: [Tweet]!
@@ -64,8 +65,13 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
             print(error.localizedDescription)
         })
     }
-
-
-
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 250
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+    }
 
 }
