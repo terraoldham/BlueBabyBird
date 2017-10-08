@@ -14,6 +14,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var homeTimelineViewController: UIViewController!
     private var profileViewController: UIViewController!
     private var mentionsViewController: UIViewController!
+    private var accountsViewController: UIViewController!
     
     var viewControllers: [UIViewController] = []
     
@@ -28,11 +29,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         homeTimelineViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
         profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileNavigationController")
         mentionsViewController = storyboard.instantiateViewController(withIdentifier: "MentionsNavigationController")
+        accountsViewController = storyboard.instantiateViewController(withIdentifier: "AccountsViewController")
         let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         
         viewControllers.append(homeTimelineViewController)
         viewControllers.append(profileViewController)
         viewControllers.append(mentionsViewController)
+        viewControllers.append(accountsViewController)
         
         menuViewController.hamburgerViewController = hamburgerViewController
         hamburgerViewController.contentViewController = homeTimelineViewController
@@ -45,12 +48,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
-        let titles = ["Home", "Profile", "Mentions"]
+        let titles = ["Home", "Profile", "Mentions", "Accounts"]
         cell.menuTitleLabel.text = titles[indexPath.row]
         return cell
     }

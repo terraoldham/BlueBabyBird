@@ -101,6 +101,25 @@
             </objects>
             <point key="canvasLocation" x="908" y="-670"/>
         </scene>
+        <!--Accounts View Controller-->
+        <scene sceneID="skt-VN-e0a">
+            <objects>
+                <viewController storyboardIdentifier="AccountsViewController" id="njs-fb-iGg" customClass="AccountsViewController" customModule="BabyBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RJN-xL-UFH"/>
+                        <viewControllerLayoutGuide type="bottom" id="QVW-pk-Zpc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hnq-rW-jfa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ywE-mq-U8V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0J-mm-wM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="-1687.1064467766118"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="NUM-Ba-scU">
             <objects>
@@ -154,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0Y-8m-piO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="-1361.4692653673164"/>
+            <point key="canvasLocation" x="3543.1999999999998" y="-1361.4692653673164"/>
         </scene>
         <!--Home-->
         <scene sceneID="gWW-Bw-tfZ">
@@ -786,7 +805,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzP-JU-Zkk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6618.3999999999996" y="-1616.041979010495"/>
+            <point key="canvasLocation" x="7557.6000000000004" y="-1616.041979010495"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="PEG-ce-YCX">
@@ -1095,7 +1114,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVX-it-GHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5677.6000000000004" y="-1616.041979010495"/>
+            <point key="canvasLocation" x="6616.8000000000002" y="-1616.041979010495"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A3A-5u-w1L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vup-xv-Hvg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ME6-Qj-8tC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="njs-fb-iGg" kind="relationship" relationship="rootViewController" id="d4s-lW-Fw2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J87-ur-g9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.8" y="-1687.1064467766118"/>
         </scene>
     </scenes>
     <resources>
