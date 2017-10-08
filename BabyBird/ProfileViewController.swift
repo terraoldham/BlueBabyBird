@@ -17,11 +17,14 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
     @IBOutlet weak var followingCount: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
     @IBOutlet weak var followersCount: UILabel!
+    @IBOutlet weak var totalView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     var user: User! = User.currentUser
     var tweets: [Tweet]!
     var tweetedFrom: String!
+    var isMoreDataLoading = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +84,28 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
         TwitterClient.sharedInstance?.userTimeline(username: user.screenname, success: { (tweets: [Tweet]) in
             self.tweets = tweets
             refreshControl.endRefreshing()
+            self.tableView.reloadData()
+        }, failure: { (error: Error) in
+            print(error.localizedDescription)
+        })
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewContentHeight = tableView.contentSize.height
+        let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
+        
+        if(scrollView.contentOffset.y > scrollOffsetThreshold && tableView.isDragging) {
+            isMoreDataLoading = true
+            loadMoreData()
+            
+        }
+    }
+    
+    func loadMoreData() {
+        let lastId = self.tweets.last!.idInt!
+        TwitterClient.sharedInstance?.userTimelineMoreTweets(username: user.screenname, sinceId: lastId, success: { (tweets: [Tweet]) in
+            self.tweets = self.tweets + tweets
+            self.isMoreDataLoading = false
             self.tableView.reloadData()
         }, failure: { (error: Error) in
             print(error.localizedDescription)

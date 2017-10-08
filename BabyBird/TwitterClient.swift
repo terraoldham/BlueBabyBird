@@ -136,9 +136,41 @@ class TwitterClient: BDBOAuth1SessionManager {
         
     }
     
+    func mentionsTimelineMoreTweets(username: String?, sinceId: IntMax!, success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> ()) {
+        var params: [String: AnyObject] = [:]
+        params = ["screen_name": username as AnyObject, "sinceId": sinceId as AnyObject]
+        
+        get("1.1/statuses/mentions_timeline.json", parameters: params, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+            let dictionaries = response as! [NSDictionary]
+            
+            let tweets = Tweet.tweetsWithArray(dictionaries: dictionaries)
+            
+            success(tweets)
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+        
+    }
+    
     func userTimeline(username: String?, success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> ()) {
         var params: [String: AnyObject] = [:]
         params["screen_name"] = username as AnyObject
+        
+        get("1.1/statuses/user_timeline.json", parameters: params, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+            let dictionaries = response as! [NSDictionary]
+            
+            let tweets = Tweet.tweetsWithArray(dictionaries: dictionaries)
+            
+            success(tweets)
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+        
+    }
+    
+    func userTimelineMoreTweets(username: String?, sinceId: IntMax!, success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> ()) {
+        var params: [String: AnyObject] = [:]
+        params = ["screen_name": username as AnyObject, "sinceId": sinceId as AnyObject]
         
         get("1.1/statuses/user_timeline.json", parameters: params, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
             let dictionaries = response as! [NSDictionary]

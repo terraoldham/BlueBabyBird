@@ -56,6 +56,27 @@ class MentionsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewContentHeight = tableView.contentSize.height
+        let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
+        
+        if(scrollView.contentOffset.y > scrollOffsetThreshold && tableView.isDragging) {
+            isMoreDataLoading = true
+            loadMoreData()
+        }
+    }
+    
+    func loadMoreData() {
+        let lastId = self.tweets.last!.idInt!
+        TwitterClient.sharedInstance?.mentionsTimelineMoreTweets(username: user.screenname, sinceId: lastId, success: { (tweets: [Tweet]) in
+            self.tweets = self.tweets + tweets
+            self.isMoreDataLoading = false
+            self.tableView.reloadData()
+        }, failure: { (error: Error) in
+            print(error.localizedDescription)
+        })
+    }
+    
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
         TwitterClient.sharedInstance?.mentionsTimeline(username: user.screenname, success: { (tweets: [Tweet]) in
             self.tweets = tweets

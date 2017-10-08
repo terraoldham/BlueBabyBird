@@ -28,12 +28,15 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         homeTimelineViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
         profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileNavigationController")
         mentionsViewController = storyboard.instantiateViewController(withIdentifier: "MentionsNavigationController")
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         
         viewControllers.append(homeTimelineViewController)
         viewControllers.append(profileViewController)
         viewControllers.append(mentionsViewController)
         
+        menuViewController.hamburgerViewController = hamburgerViewController
         hamburgerViewController.contentViewController = homeTimelineViewController
+        
     }
 
     override func didReceiveMemoryWarning() {
