@@ -8,8 +8,13 @@
 
 import UIKit
 
-class TweetCell: UITableViewCell {
 
+@objc protocol TweetCellDelegate {
+    @objc optional func tweetCell(tweetCell: TweetCell, userProfile screenname: String)
+}
+
+
+class TweetCell: UITableViewCell {
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var screennameLabel: UILabel!
@@ -22,6 +27,8 @@ class TweetCell: UITableViewCell {
     
     var retweeted: Bool = false
     var favorited: Bool = false
+    
+    weak var delegate: TweetCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -68,6 +75,9 @@ class TweetCell: UITableViewCell {
         let favoriteTap = UITapGestureRecognizer(target: self, action: #selector(onFavoriteTap(tapGestureRecognizer:)))
         favoriteView.isUserInteractionEnabled = true
         favoriteView.addGestureRecognizer(favoriteTap)
+        let profileTap = UITapGestureRecognizer(target: self, action: #selector(onProfileTap(tapGestureRecognizer:)))
+        photoView.isUserInteractionEnabled = true
+        photoView.addGestureRecognizer(profileTap)
     }
     
     @objc func onRetweetTap(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -134,6 +144,13 @@ class TweetCell: UITableViewCell {
         }
     }
     
+    @objc func onProfileTap(tapGestureRecognizer: UITapGestureRecognizer) {
+        print("onTap")
+        let screenname = tweet.user?.screenname as! String
+        print(screenname)
+        print(self)
+        delegate?.tweetCell!(tweetCell: self, userProfile: screenname)
+    }
     
     
     

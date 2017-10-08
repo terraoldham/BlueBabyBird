@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ComposeViewControllerDelegate {
+class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, TweetCellDelegate, ComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
 
 
@@ -43,6 +43,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
         cell.tweet = tweets![indexPath.row]
+        cell.delegate = self
         print(tweets![indexPath.row])
         return cell
     }
@@ -101,6 +102,15 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             cvc.delegate = self
         }
     }
+    
+    func tweetCell(tweetCell: TweetCell, userProfile screenname: String) {
+        print("tweetCell")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let pvc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        pvc.screenname = screenname
+        self.navigationController?.pushViewController(pvc, animated: true)
+    }
+    
     
     @IBAction func onMenuClick(_ sender: Any) {
         let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint(x: 0,y :0), to:self.tableView)

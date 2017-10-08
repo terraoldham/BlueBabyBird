@@ -11,9 +11,10 @@ import UIKit
 class ProfileViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-    var user = User.currentUser!
+    var user: User! = User.currentUser
     var tweets: [Tweet]!
     var tweetedFrom: String!
+    var screenname: String! = User.currentUser?.screenname
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,16 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
         
-        TwitterClient.sharedInstance?.userTimeline(username: user.screenname, success: { (tweets: [Tweet]) in
+        tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "ProfileView")
+        
+        TwitterClient.sharedInstance?.userTimeline(username: screenname, success: { (tweets: [Tweet]) in
             self.tweets = tweets
             self.tableView.reloadData()
         }, failure: { (error: Error) in
             print(error.localizedDescription)
         })
+        
+
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,26 +61,14 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
     }
     
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
-        TwitterClient.sharedInstance?.userTimeline(username: user.screenname, success: { (tweets: [Tweet]) in
+        print(screenname)
+        TwitterClient.sharedInstance?.userTimeline(username: screenname, success: { (tweets: [Tweet]) in
             self.tweets = tweets
             refreshControl.endRefreshing()
             self.tableView.reloadData()
         }, failure: { (error: Error) in
             print(error.localizedDescription)
         })
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 250
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UITableViewCell? {
-        let  headerCell = tableView.dequeueReusableCell(withIdentifier: "ProfileHeaderCell") as! ProfileHeaderCell
-        headerCell.backgroundColor = UIColor.cyan
-        headerCell.user = User.currentUser!
-        print(headerCell.user.name)
-        print(headerCell.user.screenname)
-        return headerCell
     }
 
 }
