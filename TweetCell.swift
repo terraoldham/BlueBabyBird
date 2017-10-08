@@ -10,7 +10,7 @@ import UIKit
 
 
 @objc protocol TweetCellDelegate {
-    @objc optional func tweetCell(tweetCell: TweetCell, userProfile screenname: String)
+    @objc optional func tweetCell(tweetCell: TweetCell, userProfile user: User)
 }
 
 
@@ -146,10 +146,8 @@ class TweetCell: UITableViewCell {
     
     @objc func onProfileTap(tapGestureRecognizer: UITapGestureRecognizer) {
         print("onTap")
-        let screenname = tweet.user?.screenname as! String
-        print(screenname)
-        print(self)
-        delegate?.tweetCell!(tweetCell: self, userProfile: screenname)
+        let user = tweet.user
+        delegate?.tweetCell!(tweetCell: self, userProfile: user!)
     }
     
     

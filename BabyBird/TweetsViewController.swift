@@ -103,11 +103,10 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    func tweetCell(tweetCell: TweetCell, userProfile screenname: String) {
-        print("tweetCell")
+    func tweetCell(tweetCell: TweetCell, userProfile user: User) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let pvc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-        pvc.screenname = screenname
+        pvc.user = user
         self.navigationController?.pushViewController(pvc, animated: true)
     }
     

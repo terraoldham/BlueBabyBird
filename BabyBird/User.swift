@@ -37,7 +37,7 @@ class User: NSObject {
         if let backgroundImageString = backgroundImageString {
             backgroundImageURL = URL(string: backgroundImageString)
         }
-        tagline = dictionary["dictionary"] as? String
+        tagline = dictionary["description"] as? String
         
     }
     

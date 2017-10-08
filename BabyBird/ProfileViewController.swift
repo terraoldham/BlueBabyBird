@@ -10,11 +10,18 @@ import UIKit
 
 class ProfileViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var coverPhoto: UIImageView!
+    @IBOutlet weak var profilePhoto: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var screennameLabel: UILabel!
+    @IBOutlet weak var followingCount: UILabel!
+    @IBOutlet weak var taglineLabel: UILabel!
+    @IBOutlet weak var followersCount: UILabel!
+    
     
     var user: User! = User.currentUser
     var tweets: [Tweet]!
     var tweetedFrom: String!
-    var screenname: String! = User.currentUser?.screenname
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +37,23 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
         
         tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "ProfileView")
         
-        TwitterClient.sharedInstance?.userTimeline(username: screenname, success: { (tweets: [Tweet]) in
+        TwitterClient.sharedInstance?.userTimeline(username: user.screenname, success: { (tweets: [Tweet]) in
             self.tweets = tweets
             self.tableView.reloadData()
         }, failure: { (error: Error) in
             print(error.localizedDescription)
         })
         
+        nameLabel.text = user.name
+        screennameLabel.text = "@" + user.screenname!
+        followingCount.text = user.followingCount?.description
+        followersCount.text = user.followersCount?.description
+        taglineLabel.text = user.tagline
+        coverPhoto.setImageWith(user.backgroundImageURL!)
+        profilePhoto.setImageWith(user.profileUrl!)
+        
+        profilePhoto.layer.cornerRadius = (profilePhoto.frame.width / 2)
+        profilePhoto.layer.masksToBounds = true
 
     }
 
@@ -61,8 +78,7 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
     }
     
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
-        print(screenname)
-        TwitterClient.sharedInstance?.userTimeline(username: screenname, success: { (tweets: [Tweet]) in
+        TwitterClient.sharedInstance?.userTimeline(username: user.screenname, success: { (tweets: [Tweet]) in
             self.tweets = tweets
             refreshControl.endRefreshing()
             self.tableView.reloadData()
