@@ -58,7 +58,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Would have to loved to have a better understanding about NIBs and duplicating cells. I think that this could have saved a significant amount of time. My mind was also kind of blown that you could put other items into a TableView. 
+
+I didn't have enough time to handle account management but I think this would be an interesting topic.
 
 ## License
 
