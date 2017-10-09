@@ -25,6 +25,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         homeTimelineViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
         profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileNavigationController")
@@ -53,6 +55,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
+        cell.contentView.backgroundColor = UIColor(red: 0, green: 172/255, blue: 237/255, alpha: 1.0)
         let titles = ["Home", "Profile", "Mentions", "Accounts"]
         cell.menuTitleLabel.text = titles[indexPath.row]
         return cell

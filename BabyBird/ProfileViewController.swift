@@ -14,11 +14,15 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
     @IBOutlet weak var profilePhoto: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var screennameLabel: UILabel!
-    @IBOutlet weak var followingCount: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
-    @IBOutlet weak var followersCount: UILabel!
     @IBOutlet weak var totalView: UIView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var followingView: UIView!
+    @IBOutlet weak var followersView: UIView!
+    @IBOutlet weak var tweetsView: UIView!
+    
+    @IBOutlet weak var followingCount: UILabel!
+    @IBOutlet weak var followersCount: UILabel!
+    @IBOutlet weak var tweetCount: UILabel!
     
     
     var user: User! = User.currentUser
@@ -28,7 +32,6 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
@@ -57,6 +60,16 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
         
         profilePhoto.layer.cornerRadius = (profilePhoto.frame.width / 2)
         profilePhoto.layer.masksToBounds = true
+        
+        followingView.layer.borderWidth = 1
+        followingView.layer.borderColor = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1.0).cgColor
+        
+        followersView.layer.borderWidth = 1
+        followersView.layer.borderColor = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1.0).cgColor
+        
+        tweetsView.layer.borderWidth = 1
+        tweetsView.layer.borderColor = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1.0).cgColor
+        
 
     }
 
@@ -99,6 +112,9 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
             loadMoreData()
             
         }
+        if scrollView.contentOffset.y < scrollOffsetThreshold && tableView.isDragging {
+            coverPhoto.addBlurEffect()
+        }
     }
     
     func loadMoreData() {
@@ -112,4 +128,17 @@ class ProfileViewController: UIViewController,  UITableViewDataSource, UITableVi
         })
     }
 
+}
+
+extension UIImageView
+{
+    func addBlurEffect()
+    {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        self.addSubview(blurEffectView)
+    }
 }

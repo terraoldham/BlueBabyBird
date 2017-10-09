@@ -35,6 +35,7 @@
 		0CD90F371F8608C600BCDFD4 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD90F361F8608C600BCDFD4 /* HamburgerViewController.swift */; };
 		0CD90F3B1F89C7C000BCDFD4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD90F3A1F89C7C000BCDFD4 /* ProfileView.swift */; };
 		0CD90F3D1F8AD74A00BCDFD4 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD90F3C1F8AD74A00BCDFD4 /* AccountsViewController.swift */; };
+		0CD90F3F1F8AEBA200BCDFD4 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD90F3E1F8AEBA200BCDFD4 /* AccountCell.swift */; };
 		3FB6BC67CF56289D14755AC2 /* Pods_BabyBirdTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19AAE079BF86254EB0B0137 /* Pods_BabyBirdTests.framework */; };
 		6A307C46F5BC11CC84D1C3C6 /* Pods_BabyBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */; };
 		EB201EB2D5128FE4093A1F08 /* Pods_BabyBirdUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */; };
@@ -93,6 +94,7 @@
 		0CD90F361F8608C600BCDFD4 /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
 		0CD90F3A1F89C7C000BCDFD4 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = BabyBird/ProfileView.swift; sourceTree = "<group>"; };
 		0CD90F3C1F8AD74A00BCDFD4 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		0CD90F3E1F8AEBA200BCDFD4 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountCell.swift; path = BabyBird/AccountCell.swift; sourceTree = "<group>"; };
 		1386DDB767CFB436CEB62B53 /* Pods_BabyBird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3DA77B3634CC937DCF5883 /* Pods_BabyBirdUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyBirdUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38659B2171825FF3AA2FAA03 /* Pods-BabyBirdTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyBirdTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyBirdTests/Pods-BabyBirdTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				0CCA0DEA1F7DD32800669D62 /* TweetCell.swift */,
 				0CD90F331F86057600BCDFD4 /* MenuCell.swift */,
 				0CD90F3A1F89C7C000BCDFD4 /* ProfileView.swift */,
+				0CD90F3E1F8AEBA200BCDFD4 /* AccountCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				0CD90F341F86057600BCDFD4 /* MenuCell.swift in Sources */,
 				0C443E5E1F7B6F6900CD992E /* User.swift in Sources */,
 				0C443E601F7B6F7200CD992E /* Tweet.swift in Sources */,
+				0CD90F3F1F8AEBA200BCDFD4 /* AccountCell.swift in Sources */,
 				0CD90F3D1F8AD74A00BCDFD4 /* AccountsViewController.swift in Sources */,
 				0CD90F371F8608C600BCDFD4 /* HamburgerViewController.swift in Sources */,
 				0CD90ED21F7F14A700BCDFD4 /* DetailsViewController.swift in Sources */,
